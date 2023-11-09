@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.navbar{
+    display: flex;
+    background-color: black;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+a {
+    margin: 13px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Inconsolata', monospace, arial;
+    font-size: 12px;
+}
+
