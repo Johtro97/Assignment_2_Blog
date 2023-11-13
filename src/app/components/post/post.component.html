@@ -1,1 +1,10 @@
-<p>post works!</p>
+
+<div class="mainContainer">
+    <div class="postItem" *ngFor="let post of postList" routerLink="/details-page/{{ post.title }}">
+        <h3>{{post.title}}</h3>
+        <div class="imgWrapper"><img src="{{post.thumbnailUrl}}" alt="img"/></div>
+    </div>
+    
+</div>
+
+

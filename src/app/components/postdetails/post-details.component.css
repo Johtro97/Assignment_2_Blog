@@ -3,19 +3,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 10px;
-   
+
 }
 
 .postItem{
-    width: 100%;
+    width: 50%;
     margin-top: 100px;
     padding-bottom: 100px;
     border-bottom: 1px solid grey;
-    cursor: pointer;
-    
+    cursor: pointer;   
+}
 
+h3{
+    text-align: center;
 }
 
 .imgWrapper{
@@ -28,7 +29,8 @@ img{
     min-height: 200px;
     max-height: 400px;
     max-width: 500px;;
-    
-    
-    
 }
+
+
+
+ 
