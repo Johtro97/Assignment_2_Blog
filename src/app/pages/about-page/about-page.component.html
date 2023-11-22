@@ -1,1 +1,35 @@
-<p>about-page works!</p>
+<section class="mainContainer">
+  <section class="about">
+    <h2>About Me</h2>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus volutpat sagittis. Morbi congue condimentum auctor. Mauris ut ultricies ante, quis volutpat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum pretium lectus vel ante commodo, eu tempus erat iaculis. Proin tempor ligula ac consectetur pulvinar. Etiam consectetur porta nisi ut placerat. Ut malesuada bibendum orci, quis auctor tellus consectetur quis. Curabitur et odio vel odio dapibus posuere. Ut in tincidunt mi, nec sagittis felis. Maecenas scelerisque nisi vel felis vehicula, in ultrices purus feugiat.
+      </p>
+      <br>
+      <p>
+      Ut rutrum sed neque non pellentesque. Curabitur sodales facilisis velit at ullamcorper. Nam congue quam vitae libero tempus consequat. Donec euismod velit vel eleifend mollis. Quisque vitae ipsum id ipsum viverra ultricies a ac risus. Quisque ut turpis nec urna volutpat facilisis dapibus varius metus. Quisque eget turpis commodo leo tristique fringilla. Phasellus eget ultricies massa. Maecenas quam erat, dapibus in tristique in, dapibus ut felis.
+      </p>
+      <br>
+      <p>
+      Etiam porttitor vulputate justo, eu imperdiet eros aliquam ac. Duis luctus est a mi malesuada, eget mattis leo ultricies. Donec vestibulum ante neque, a porta nisi euismod sed. Duis maximus, lacus non rutrum interdum, nunc libero rhoncus mauris, quis luctus metus tellus at felis. Donec auctor vulputate nisi vitae varius. Morbi cursus sem tellus, vitae consectetur ipsum consectetur vitae. Mauris vel sapien eget dui cursus tincidunt sit amet ut nulla.
+      </p>
+      <br>
+      <p>
+      Vestibulum fringilla nibh nec placerat luctus. Duis tristique ipsum quis dui ullamcorper, mattis finibus eros lacinia. Morbi at volutpat quam, at tincidunt sapien. Nulla fermentum sed nunc vel pulvinar. Cras tempor justo eget malesuada sagittis. In ut risus erat. Phasellus ut ligula a nunc porta ultrices in a sapien. Fusce condimentum magna sed velit varius sodales. Proin vestibulum, urna a vulputate condimentum, lorem felis ullamcorper magna, sed fermentum velit quam vel nisl.
+      </p>
+    </div>
+  </section>
+
+  
+  <section class="contactSection">
+    <h3>Contact Me</h3>
+    <form class="form" >
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" #name required/>
+      <label for="email">Email</label>
+      <input type ="email" name="email" id=email #email required/>
+      <label for="message">Message</label>
+      <textarea class="textarea" type="text" name="message" id="message" #message required></textarea>
+      <button type="submit" (click)="sendMessage(name.value, email.value, message.value )" (click)="name.value='';" (click)="email.value='';" (click)="message.value='';">Send</button>
+    </form>
+  </section>
+</section>

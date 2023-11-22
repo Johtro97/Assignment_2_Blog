@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { PostService } from 'src/app/service/post.service';
+import { BlogPost } from 'src/app/utils/blog-post';
+
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  constructor(private postService: PostService) {}
+
+  get postList(): BlogPost[]{
+    return this.postService.postList;
+  }  
 }

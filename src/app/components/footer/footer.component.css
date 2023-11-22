@@ -1,0 +1,27 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin-top: 100px;
+}
+
+div{
+  display: flex;
+  list-style: none;
+  height: auto;
+ 
+  
+}
+
+a{
+  color: white;
+  width: 20px;
+  margin: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+

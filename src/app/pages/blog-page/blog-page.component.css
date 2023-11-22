@@ -1,8 +1,17 @@
-
 .blogPage{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column-reverse;
+    height: 100%;  
+}
+
+.userView{
+    display: block;
+}
+
+.adminView{
+    display: none;
 }
 
 .toggle{
@@ -13,7 +22,6 @@
     color: white;
 }
   
-
 .toggleBtn{
     width: 40px;
     height: auto;
@@ -33,5 +41,8 @@ svg{
     margin-top: 8px;
 }
 
-
- 
+.admin{
+    position: sticky;
+    top: 40px;
+    
+}

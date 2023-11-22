@@ -1,9 +1,21 @@
 .sidebar{
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    border: 1px solid grey;
-    
-  }
+  padding: 10%;
+  border: 1px solid grey;
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.createPost{
+  display: flex;
+  flex-direction: column;
+}
 
 
+.textarea{
+  max-width: 500px;
+  min-width: 200px;
+  min-height: 100px;
+  max-height: 200px;
+}

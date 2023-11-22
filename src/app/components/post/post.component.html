@@ -1,10 +1,8 @@
 
 <div class="mainContainer">
-    <div class="postItem" *ngFor="let post of postList" routerLink="/details-page/{{ post.title }}">
-        <h3>{{post.title}}</h3>
-        <div class="imgWrapper"><img src="{{post.thumbnailUrl}}" alt="img"/></div>
-    </div>
-    
+  <div class="postItem">
+    <h3>{{post.title}}</h3>
+    <div class="imgWrapper"><img src="{{post.thumbnailUrl}}" onerror="this.src='https://cdn3.iconfinder.com/data/icons/nature-37/120/aeaqas-512.png'"  alt="..." /></div>
+  </div>
 </div>
-
 

@@ -1,13 +1,13 @@
 export class BlogPost {
-  title: string;
-  thumbnailUrl: string;
-  body: string;
-  creationDate: number;
-  likes: number;
-  dislikes: number;
-  comments: string[];
+  public title: string;
+  public thumbnailUrl: string;
+  public body: string;
+  public creationDate: Date;
+  public likes: number;
+  public dislikes: number;
+  public comments: string[];
   
-  constructor(title: string, thumbnailUrl: string, body: string, creationDate: number, likes: number, dislikes: number, comments: string[]) {
+  constructor(title: string, thumbnailUrl: string, body: string, creationDate: Date, likes: number, dislikes: number, comments: string[]) {
     this.title = title;
     this.thumbnailUrl = thumbnailUrl;
     this.body = body;
