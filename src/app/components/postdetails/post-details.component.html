@@ -1,22 +1,41 @@
 <section class="mainContainer" *ngIf="post">
   <section class="postItem" >
-    <h3>{{post.title}}</h3>
-    <p>{{post.creationDate | date:'mediumDate'}}</p>
-    <div class="imgWrapper"><img src="{{post.thumbnailUrl}}" onerror="this.src='https://cdn3.iconfinder.com/data/icons/nature-37/120/aeaqas-512.png'"  alt="..." /></div>
+    <h2>{{post.title}}</h2>
+    <span>{{post.creationDate | date:'mediumDate'}}</span>
+    <div><img src="{{post.thumbnailUrl}}" onerror="this.src='https://cdn3.iconfinder.com/data/icons/nature-37/120/aeaqas-512.png'"  alt="..." /></div>
     <p>{{post.body}}</p>
-    <button (click)="upVote()">{{post.likes}}<svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M2 42h8v-24h-8v24zm44-22c0-2.21-1.79-4-4-4h-12.63l1.91-9.14c.04-.2.07-.41.07-.63 0-.83-.34-1.58-.88-2.12l-2.13-2.11-13.17 13.17c-.72.73-1.17 1.73-1.17 2.83v20c0 2.21 1.79 4 4 4h18c1.66 0 3.08-1.01 3.68-2.44l6.03-14.1c.18-.46.29-.95.29-1.46v-3.83l-.02-.02.02-.15z"/></svg></button>
-    <button (click)="downVote()">{{post.dislikes}}<svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M30 6h-18c-1.66 0-3.08 1.01-3.68 2.44l-6.03 14.1c-.18.46-.29.95-.29 1.46v3.83l.02.02-.02.15c0 2.21 1.79 4 4 4h12.63l-1.91 9.14c-.04.2-.07.41-.07.63 0 .83.34 1.58.88 2.12l2.13 2.11 13.17-13.17c.72-.73 1.17-1.73 1.17-2.83v-20c0-2.21-1.79-4-4-4zm8 0v24h8v-24h-8z"/></svg></button>
+ 
+    <section class="vote">
+      <ul>
+        <li>{{post.likes}}</li>
+        <li><button type="button" (click)="upVote()"><svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M2 42h8v-24h-8v24zm44-22c0-2.21-1.79-4-4-4h-12.63l1.91-9.14c.04-.2.07-.41.07-.63 0-.83-.34-1.58-.88-2.12l-2.13-2.11-13.17 13.17c-.72.73-1.17 1.73-1.17 2.83v20c0 2.21 1.79 4 4 4h18c1.66 0 3.08-1.01 3.68-2.44l6.03-14.1c.18-.46.29-.95.29-1.46v-3.83l-.02-.02.02-.15z"/></svg></button></li>
+      </ul>
+      <ul>
+        <li>{{post.dislikes}}</li>
+        <li><button type="button" (click)="downVote()"><svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M30 6h-18c-1.66 0-3.08 1.01-3.68 2.44l-6.03 14.1c-.18.46-.29.95-.29 1.46v3.83l.02.02-.02.15c0 2.21 1.79 4 4 4h12.63l-1.91 9.14c-.04.2-.07.41-.07.63 0 .83.34 1.58.88 2.12l2.13 2.11 13.17-13.17c.72-.73 1.17-1.73 1.17-2.83v-20c0-2.21-1.79-4-4-4zm8 0v24h8v-24h-8z"/></svg></button></li>
+      </ul>
+      
+      
+    </section>
   </section>
   
-  <section class="comments">Comments
-    <ul>
-      <li *ngFor="let comment of post.comments">
-        {{comment}}
-      </li>
-    </ul>
-    <form>
-      <label for="text">Write your comment</label>
-      <textarea type="text" name="text" id="text" #content required></textarea>
+  <section class="commentSection">
+    <h2>Comments</h2>
+    <div *ngFor="let comment of post.comments">
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+          </svg>
+        </li>
+        <li>{{comment}}</li>
+      </ul>
+    </div>
+
+    <form class="formSection">
+      <label for="text">Comment</label>
+      <textarea type="text" name="text" id="text" #content placeholder=" ..." required></textarea>
       <button type="submit" (click)="addComment(content.value)" (click)="content.value = '';">Send</button>
     </form>
   </section>

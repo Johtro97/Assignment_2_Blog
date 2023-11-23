@@ -11,7 +11,7 @@
 
 <div class="blogPage">
 	<div [ngClass]="admin ? 'adminView' : 'userView'">
-		<div class="postItem" *ngFor="let post of postList.slice().reverse()" routerLink="/details-page/{{ post.title }}">
+		<div *ngFor="let post of postList.slice().reverse()" routerLink="/details-page/{{ post.creationDate }}">
 			<app-post [post]="post"></app-post>
 		</div>
 		

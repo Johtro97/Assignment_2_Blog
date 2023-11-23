@@ -1,7 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogPost } from 'src/app/utils/blog-post';
 import { PostService } from 'src/app/service/post.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-post-details',
@@ -9,6 +10,7 @@ import { PostService } from 'src/app/service/post.service';
   styleUrls: ['./post-details.component.css']
 })
 export class PostDetailsComponent {
+  creationDate: Date = new Date;
   title: string = "";
 
   constructor(
@@ -16,13 +18,13 @@ export class PostDetailsComponent {
     private postService: PostService)
     {
       activatedRoute.params.subscribe((params) => {
-        this.title = params['title'];
+        this.creationDate = params['creationDate'];
       });
     }
 
   get post(): BlogPost | undefined {
     return this.postService.postList.find(
-      (post) => post.title === this.title,
+      (post) => post.creationDate === this.creationDate,
     );
   }
 
@@ -45,6 +47,7 @@ export class PostDetailsComponent {
         if(content.length > 0){
           this.postService.addComment(this.post, content);
         }
+        else alert("Write something first!")
       }
   }
   

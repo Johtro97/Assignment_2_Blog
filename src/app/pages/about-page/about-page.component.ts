@@ -12,15 +12,17 @@ export class AboutPageComponent {
   message: string = ""; 
 
   sendMessage(name: string, email: string, message: string): void {
-    if(name.length > 0, email.length > 0, message.length > 0){
-      let contact: string = "name: " + name + ", email: " + email + ", Message: " + message;
-      alert("Message Sent!")
-      console.log(contact)
-    }
-    this.name = "";
-    this.email = "";
-    this.message = "";  
-      
+    if(name.length > 0){
+      if(email.length > 0){
+        if(message.length > 0){
+          let contact: string = "name: " + name + ", email: " + email + ", Message: " + message;
+          alert("Message Sent!")
+          console.log(contact)
+          this.name = "";
+          this.email = "";
+          this.message = "";  
+        } else alert("Please, write your message")
+      } else alert("Please, write your email")
+    } else alert("Please, write your name")
   }
-
 }

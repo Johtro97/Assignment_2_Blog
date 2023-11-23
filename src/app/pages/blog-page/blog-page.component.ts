@@ -25,7 +25,6 @@ export class BlogPageComponent{
   }
 
   get postList(): BlogPost[]{
-    this.postService.getPlaceHolderData();
     return this.postService.postList;
   }
 }

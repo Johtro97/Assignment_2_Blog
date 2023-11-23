@@ -13,6 +13,7 @@ export class HomePageComponent {
   constructor(private postService: PostService) {}
 
   get postList(): BlogPost[]{
+    this.postService.getPlaceHolderData();
     return this.postService.postList;
   }  
 }

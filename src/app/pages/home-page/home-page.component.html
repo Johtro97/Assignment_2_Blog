@@ -4,6 +4,6 @@
 
 <div class="mainContainer"> 
   <h2>Latest Post</h2>
-  <div *ngFor="let post of postList.slice(-1).reverse()" routerLink="/details-page/{{ post.title }}">
+  <div *ngFor="let post of postList.slice(-1).reverse()" routerLink="/details-page/{{ post.creationDate }}">
     <app-post [post]="post"></app-post>
 </div>

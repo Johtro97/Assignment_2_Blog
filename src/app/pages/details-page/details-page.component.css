@@ -1,0 +1,19 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  position: sticky;
+  top: 50%;
+  width: 35px;
+  left: 15%;
+  border: 1px solid rgb(106, 145, 145);
+  color: rgb(106, 145, 145);
+  background-color: inherit;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 7px;
+}
+
+

@@ -89,12 +89,10 @@ export class PostService {
       new Date("2023-11-14"),
       27,
       2,
-      ["This is great, thank you for sharing!", "Dolor sit amet. Convallis aenean et tortor at risus viverra adipiscing at.","Lorem ipsum. Convallis aenean et tortor at risus viverra adipiscing at.",  "Dolor sit amet. Convallis aenean et tortor at risus viverra adipiscing at."]
+      ["This is great, thank you for sharing!", "Convallis aenean et tortor at risus viverra adipiscing at.", "Lorem ipsum. Convallis aenean et tortor at risus viverra adipiscing at.",  "Dolor sit amet. Convallis aenean et tortor at risus viverra adipiscing at."]
     )
   ];
 
-    
-    
 }
 
 

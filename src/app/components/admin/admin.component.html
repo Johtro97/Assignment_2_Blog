@@ -1,12 +1,12 @@
-<div class="sidebar">
+<div class="container">
   <h5>Create New Post</h5>
   <form class="createPost">
-    <label>Title</label>
-    <input #title placeholder="title" required/> 
+    <label>Title *</label>
+    <input #title required/> 
     <label>Picture </label>
     <input #thumbnailUrl placeholder="Url"/>
-    <label>Text</label>
+    <label>Text *</label>
     <textarea #body class="textarea" placeholder="..." required></textarea>
-    <button type="submit" (click)="addPost(title.value, thumbnailUrl.value, body.value)">Submit</button>
+    <button type="button" (click)="addPost(title.value, thumbnailUrl.value, body.value)" (click)="title.value='';" (click)="thumbnailUrl.value='';">Submit</button>
   </form>
 </div>

@@ -19,7 +19,7 @@ const routes: Routes = [
     component: BlogPageComponent
   },
   {
-    path: 'details-page/:title',
+    path: 'details-page/:creationDate',
     component: DetailsPageComponent
   },
 ];
